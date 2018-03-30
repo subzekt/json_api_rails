@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Index a page
+```bash
+curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{ "data": { "type": "pages", "attributes": { "url": "https://danfeinfotech.com" } } }' http://localhost:3000/api/v1/pages
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+List all the contents:
+```bash
+curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/api/v1/contents"```
